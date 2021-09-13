@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">TrabalhoSemestral</string>
+    <string name="buttonTelaConfig_txt">Tela de Configuração</string>
+    <string name="buttonTelaNaveg_txt">Tela de Navegação</string>
+    <string name="buttonTelaHist_txt">Tela de Histórico</string>
+    <string name="buttonTelaGnss_txt">Tela do GNSS</string>
+    <string name="buttonTelaCred_txt">Tela de Créditos</string>
 </resources>
