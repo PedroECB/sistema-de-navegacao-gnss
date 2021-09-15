@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/spinnerKM"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConfigActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="324dp"
+        android:layout_height="247dp"
+        android:layout_marginTop="32dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/labelCoordenadas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/labelCoordenadas" />
+
+        <Spinner
+            android:id="@+id/spinnerCoordenadas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/fomatosCoordenadas" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/labelUnidadeVelocidade" />
+
+        <Spinner
+            android:id="@+id/spinnerFormatoVelocidade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/fomatosVelocidade" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/labelOrientaçãoMapa" />
+
+        <Spinner
+            android:id="@+id/spinnerOrientacaoMapa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/orientacoesMapa" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/labelTipoMapa" />
+
+        <Spinner
+            android:id="@+id/spinnerTipoMapa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/tiposMapa" />
+
+        <Switch
+            android:id="@+id/switchInformacaoTrafego"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/labelInformacaoTrafego" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="359dp"
+        android:layout_height="107dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.408">
+
+        <Button
+            android:id="@+id/btnSalvarConfig"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/labelBtnSalvar" />
+
+        <Button
+            android:id="@+id/btnCancelarConfig"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/labelBtnCancelar" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

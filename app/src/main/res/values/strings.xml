@@ -5,4 +5,34 @@
     <string name="buttonTelaHist_txt">Tela de Histórico</string>
     <string name="buttonTelaGnss_txt">Tela do GNSS</string>
     <string name="buttonTelaCred_txt">Tela de Créditos</string>
+    <string name="labelCoordenadas">Formato de coordenadas do mapa</string>
+    <string name="labelUnidadeVelocidade">Formato apresentação velocidade</string>
+    <string name="labelOrientaçãoMapa">Orientação Mapa</string>
+    <string name="labelTipoMapa">Tipo de mapa</string>
+    <string name="labelInformacaoTrafego">Informação de tráfego</string>
+
+    <string-array name="fomatosCoordenadas">
+        <item>Grau decimal</item>
+        <item>Grau-Minuto decimal</item>
+        <item>Grau-Minuto-Segundo decimal</item>
+    </string-array>
+
+    <string-array name="fomatosVelocidade">
+        <item>Km/h (quilometro por hora)</item>
+        <item>Mph (milhas por hora)</item>
+        <item>Grau-Minuto-Segundo decimal</item>
+    </string-array>
+
+    <string-array name="orientacoesMapa">
+        <item>Nenhuma</item>
+        <item>North Up</item>
+        <item>Course Up</item>
+    </string-array>
+
+    <string-array name="tiposMapa">
+        <item>Vetorial</item>
+        <item>Imagem de satélite </item>
+    </string-array>
+    <string name="labelBtnSalvar">Salvar</string>
+    <string name="labelBtnCancelar">Cancelar</string>
 </resources>

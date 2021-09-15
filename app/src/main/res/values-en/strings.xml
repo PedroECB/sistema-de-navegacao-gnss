@@ -6,4 +6,34 @@
     <string name="buttonTelaHist_txt">"History Screen "</string>
     <string name="buttonTelaGnss_txt">"GNSS screen "</string>
     <string name="buttonTelaCred_txt">"Credits Screen "</string>
+    <string name="labelCoordenadas">Format coordinates</string>
+    <string name="labelUnidadeVelocidade">Format speed</string>
+    <string name="labelOrientaçãoMapa">Map orientation</string>
+    <string name="labelTipoMapa">Map type</string>
+    <string name="labelInformacaoTrafego">Traffic information</string>
+
+    <string-array name="fomatosCoordenadas">
+        <item>Decimal degree</item>
+        <item>Decimal Degree-Minute</item>
+        <item>Degree-Minute-Decimal Second</item>
+    </string-array>
+
+    <string-array name="fomatosVelocidade">
+        <item>Km/h (kilometer per hour)</item>
+        <item>Mph (miles per hour)</item>
+        <item>Degree-Minute-Decimal Second</item>
+    </string-array>
+
+    <string-array name="orientacoesMapa">
+        <item>None</item>
+        <item>North Up</item>
+        <item>Course Up</item>
+    </string-array>
+
+    <string-array name="tiposMapa">
+        <item>Vector</item>
+        <item>satellite image </item>
+    </string-array>
+    <string name="labelBtnSalvar">Save</string>
+    <string name="labelBtnCancelar">Cancel</string>
 </resources>
