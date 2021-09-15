@@ -22,55 +22,62 @@
             android:id="@+id/labelCoordenadas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/labelCoordenadas" />
+            android:text="@string/labelCoordenadas"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
         <Spinner
             android:id="@+id/spinnerCoordenadas"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
             android:entries="@array/fomatosCoordenadas" />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/labelUnidadeVelocidade" />
+            android:text="@string/labelUnidadeVelocidade"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
         <Spinner
             android:id="@+id/spinnerFormatoVelocidade"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
             android:entries="@array/fomatosVelocidade" />
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/labelOrientaçãoMapa" />
+            android:text="@string/labelOrientaçãoMapa"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
         <Spinner
             android:id="@+id/spinnerOrientacaoMapa"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:entries="@array/orientacoesMapa" />
+            android:layout_height="30dp"
+            android:entries="@array/orientacoesMapa"
+            android:foregroundTint="@color/purple_500" />
 
         <TextView
             android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/labelTipoMapa" />
+            android:text="@string/labelTipoMapa"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
         <Spinner
             android:id="@+id/spinnerTipoMapa"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:entries="@array/tiposMapa" />
+            android:layout_height="30dp"
+            android:entries="@array/tiposMapa"
+            android:foregroundTint="@color/purple_500" />
 
         <Switch
             android:id="@+id/switchInformacaoTrafego"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/labelInformacaoTrafego" />
+            android:layout_height="30dp"
+            android:text="@string/labelInformacaoTrafego"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
     </LinearLayout>
 
