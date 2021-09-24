@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
                 break;
 
             case R.id.button_telacreditos:
-                Intent configCredito = new Intent(this, ConfigActivity.class);
+                Intent configCredito = new Intent(this, CreditoActivity.class);
                 startActivity(configCredito);
                 break;
         }
