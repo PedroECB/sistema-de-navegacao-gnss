@@ -17,8 +17,10 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         setContentView(R.layout.activity_main);
 
         Button botaoConfiguracao = (Button) findViewById(R.id.button_telaconfiguracao);
+        Button botaoCreditos = (Button) findViewById(R.id.button_telacreditos);
 
         botaoConfiguracao.setOnClickListener(this);
+        botaoCreditos.setOnClickListener(this);
     }
 
     @Override
@@ -29,6 +31,11 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
             case R.id.button_telaconfiguracao:
                 Intent configTela = new Intent(this, ConfigActivity.class);
                 startActivity(configTela);
+                break;
+
+            case R.id.button_telacreditos:
+                Intent configCredito = new Intent(this, ConfigActivity.class);
+                startActivity(configCredito);
                 break;
         }
     }
