@@ -1,5 +1,5 @@
- # Sistema-de-navegacao-gnss
+ # Sistema-De-Navegacao-Gnss
 
-## Trabalho semestral da disciplina Programação de Dispositivos Móveis
+## Trabalho Semestral da Disciplina Programação de Dispositivos Móveis
 
 ### Equipe: Átila Batista, Yves Moura, Pedro Bastos, Pedro Ivo
