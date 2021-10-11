@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">"Semester work "</string>
-    <string name="buttonTelaConfig_txt">"Configuration Screen "</string>
-    <string name="buttonTelaNaveg_txt">"Navigation Screen "</string>
-    <string name="buttonTelaHist_txt">"History Screen "</string>
-    <string name="buttonTelaGnss_txt">"GNSS screen "</string>
-    <string name="buttonTelaCred_txt">"Credits Screen "</string>
+    <string name="app_name">MAPS</string>
+    <string name="buttonTelaConfig_txt">Configuration</string>
+    <string name="buttonTelaNaveg_txt">"Navigation "</string>
+    <string name="buttonTelaHist_txt">"History "</string>
+    <string name="buttonTelaGnss_txt">"GNSS  "</string>
+    <string name="buttonTelaCred_txt">"Credits "</string>
     <string name="labelCoordenadas">Format coordinates</string>
     <string name="labelUnidadeVelocidade">Format speed</string>
     <string name="labelOrientaçãoMapa">Map orientation</string>
@@ -36,4 +36,7 @@
     </string-array>
     <string name="labelBtnSalvar">Save</string>
     <string name="labelBtnCancelar">Cancel</string>
+    <string name="labelSobre">About</string>
+    <string name="labelDevs">Developers</string>
+    <string name="labelVersion">Version</string>
 </resources>

@@ -58,9 +58,6 @@ public class ConfigActivity extends AppCompatActivity implements View.OnClickLis
 
 
         //Obtendo as preferências salvar pelo usuários, se houver.
-        String teste = arrayVelocidade.getItem(1).toString();
-
-        Toast.makeText(this, "Texto velocidade padrão array: "+teste, Toast.LENGTH_SHORT).show();
 
         sharedPreferences = getSharedPreferences("UserMapPreferences", MODE_PRIVATE);
 
@@ -99,13 +96,14 @@ public class ConfigActivity extends AppCompatActivity implements View.OnClickLis
                 String textTipoMapa = spinnerTiposMapa.getSelectedItem().toString();
                 String textInfoTrafego = switchInfoTrafego.isChecked() ? "On": "Off";
 
-                int indexCoordenadas = spinnerCoordenadas.getSelectedItemPosition();
 
-                Toast.makeText(this, "Formato coordenadas:"+indexCoordenadas, Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "As configurações foram salvas com sucesso!", Toast.LENGTH_SHORT).show();
+/*                Toast.makeText(this, "Formato coordenadas:"+indexCoordenadas, Toast.LENGTH_SHORT).show();
+                int indexCoordenadas = spinnerCoordenadas.getSelectedItemPosition();
                 Toast.makeText(this, "Formato velocidade:"+textVelocidade, Toast.LENGTH_SHORT).show();
                 Toast.makeText(this, "Orientação do mapa:"+textOrientacaoMapa, Toast.LENGTH_SHORT).show();
                 Toast.makeText(this, "Tipo de mapa:"+textTipoMapa, Toast.LENGTH_SHORT).show();
-                Toast.makeText(this, "Info Tráfego:"+textInfoTrafego, Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Info Tráfego:"+textInfoTrafego, Toast.LENGTH_SHORT).show();*/
 
 
                 sharedPreferences = getSharedPreferences("UserMapPreferences", MODE_PRIVATE);

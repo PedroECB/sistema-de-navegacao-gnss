@@ -1,39 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:backgroundTint="#DDEAE1"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/button_telaconfiguracao"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/buttonTelaConfig_txt" />
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="294dp"
+        android:layout_height="148dp"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.133"
+        app:srcCompat="@drawable/bussola_icon" />
 
-    <Button
-        android:id="@+id/button_telanavegacao"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/buttonTelaNaveg_txt" />
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="301dp"
+        android:layout_height="346dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2">
 
-    <Button
-        android:id="@+id/button_telahistorico"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/buttonTelaHist_txt" />
+        <Button
+            android:id="@+id/button_telanavegacao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#11A0B3"
+            android:text="@string/buttonTelaNaveg_txt"
+            android:textStyle="bold"
+            app:cornerRadius="10dp"
+            app:icon="@android:drawable/ic_menu_send"
+            app:iconTint="#FFFF" />
 
-    <Button
-        android:id="@+id/button_telagnss"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/buttonTelaGnss_txt" />
+        <Button
+            android:id="@+id/button_telagnss"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#11A0B3"
+            android:text="@string/buttonTelaGnss_txt"
+            android:textStyle="bold"
+            app:cornerRadius="10dp"
+            app:icon="@android:drawable/ic_menu_send"
+            app:iconTint="#FFFFFF" />
 
-    <Button
-        android:id="@+id/button_telacreditos"
-        android:layout_width="match_parent"
+        <Button
+            android:id="@+id/button_telahistorico"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#11A0B3"
+            android:text="@string/buttonTelaHist_txt"
+            android:textStyle="bold"
+            app:cornerRadius="10dp"
+            app:icon="@android:drawable/ic_menu_send" />
+
+        <Button
+            android:id="@+id/button_telaconfiguracao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#11A0B3"
+            android:text="@string/buttonTelaConfig_txt"
+            android:textStyle="bold"
+            app:cornerRadius="10dp"
+            app:icon="@android:drawable/ic_menu_send" />
+
+        <Button
+            android:id="@+id/button_telacreditos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#11A0B3"
+            android:text="@string/buttonTelaCred_txt"
+            android:textStyle="bold"
+            app:cornerRadius="10dp"
+            app:icon="@android:drawable/ic_menu_send" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/buttonTelaCred_txt" />
-</LinearLayout>
+        android:fontFamily="casual"
+        android:text="@string/app_name"
+        android:textColor="#11A0B3"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.339" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
