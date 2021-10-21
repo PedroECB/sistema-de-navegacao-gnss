@@ -38,4 +38,5 @@
     <string name="labelSobre">Sobre</string>
     <string name="labelDevs">Desenvolvedores</string>
     <string name="labelVersion">Versão</string>
+    <string name="title_activity_maps">MapsActivity</string>
 </resources>
