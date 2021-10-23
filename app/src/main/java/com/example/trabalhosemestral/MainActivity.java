@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
 
         switch (view.getId()){
             case R.id.button_telanavegacao:
-                Intent navegacao = new Intent(this, MapsActivity.class);
+                Intent navegacao = new Intent(this, NavegacaoActivity.class);
                 startActivity(navegacao);
                 break;
 
