@@ -20,7 +20,6 @@
     <string-array name="fomatosVelocidade">
         <item>Km/h (quilometro por hora)</item>
         <item>Mph (milhas por hora)</item>
-        <item>Grau-Minuto-Segundo decimal</item>
     </string-array>
 
     <string-array name="orientacoesMapa">

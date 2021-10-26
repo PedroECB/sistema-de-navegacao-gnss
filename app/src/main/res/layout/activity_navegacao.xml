@@ -1,9 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<fragment xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:map="http://schemas.android.com/apk/res-auto"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/map"
-    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:id="@+id/linearLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NavegacaoActivity" />
+    android:backgroundTint="#DDEAE1"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="407dp"
+        android:layout_height="501dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".NavegacaoActivity" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="381dp"
+        android:layout_height="116dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/labelCoordenadasMapa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Latitude e longitude:"
+            android:textColor="#11A0B3"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/labelVelocidadeMapa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Velocidade:"
+            android:textColor="#11A0B3"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/labelTipoMapa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tipo de mapa: Vetorial" />
+
+        <TextView
+            android:id="@+id/labelOrientacaoMapa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Orientação:" />
+
+        <TextView
+            android:id="@+id/labelInfoTrafegoMapa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Informação de tráfego:" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

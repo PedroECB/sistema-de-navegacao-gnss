@@ -21,7 +21,6 @@
     <string-array name="fomatosVelocidade">
         <item>Km/h (kilometer per hour)</item>
         <item>Mph (miles per hour)</item>
-        <item>Degree-Minute-Decimal Second</item>
     </string-array>
 
     <string-array name="orientacoesMapa">
