@@ -20,11 +20,14 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         Button botaoNavegacao = (Button) findViewById(R.id.button_telanavegacao);
         Button botaoConfiguracao = (Button) findViewById(R.id.button_telaconfiguracao);
         Button botaoCreditos = (Button) findViewById(R.id.button_telacreditos);
+        Button botaoHistorico = (Button) findViewById(R.id.button_telahistorico);
+
 
 
         botaoNavegacao.setOnClickListener(this);
         botaoConfiguracao.setOnClickListener(this);
         botaoCreditos.setOnClickListener(this);
+        botaoHistorico.setOnClickListener(this);
     }
 
     @Override
@@ -45,6 +48,11 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
                 Intent configCredito = new Intent(this, CreditoActivity.class);
                 startActivity(configCredito);
                 break;
+            case R.id.button_telahistorico:
+                Intent historico = new Intent(this, MenuHistorico.class);
+                startActivity(historico);
+                break;
+
 
 
 

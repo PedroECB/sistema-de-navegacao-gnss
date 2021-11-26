@@ -71,17 +71,8 @@
         <TextView
             android:id="@+id/textView8"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="42dp"
             android:text="Yves Moura"
-            android:textAlignment="center"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/textView9"
-            android:layout_width="match_parent"
-            android:layout_height="69dp"
-            android:text="Átila Batista"
             android:textAlignment="center"
             android:textSize="16sp"
             android:textStyle="bold" />

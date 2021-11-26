@@ -37,6 +37,11 @@
     <string name="labelSobre">Sobre</string>
     <string name="labelDevs">Desenvolvedores</string>
     <string name="labelVersion">Versão</string>
-    <string name="title_activity_maps">MapsActivity</string>
-    <string name="title_activity_navegacao">NavegacaoActivity</string>
+    <string name="labelTitleHistorico">Histórico</string>
+    <string name="labelModoVisualizacaoHistorico">Modo de visualização:</string>
+    <string name="buttonModoTabela">Tabela</string>
+    <string name="buttonModoMapa">Mapa</string>
+    <string name="title_activity_navegacao">Navegação Activity</string>
+    <!-- Strings used for fragments for navigation -->
+
 </resources>

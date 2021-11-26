@@ -38,4 +38,10 @@
     <string name="labelSobre">About</string>
     <string name="labelDevs">Developers</string>
     <string name="labelVersion">Version</string>
+    <string name="labelTitleHistorico">Historic</string>
+    <string name="labelModoVisualizacaoHistorico">View mode:</string>
+    <string name="buttonModoTabela">Table</string>
+    <string name="buttonModoMapa">Map</string>
+    <string name="title_activity_navegacao">NavigationActivity</string>
+
 </resources>

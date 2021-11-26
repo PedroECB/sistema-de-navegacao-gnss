@@ -103,7 +103,7 @@ public class NavegacaoActivity extends FragmentActivity implements OnMapReadyCal
 
         markerOptions = new MarkerOptions();
         markerOptions.position(salvador);
-        markerOptions.title("Localização aleatória");
+        markerOptions.title("Localização");
         markerOptions.snippet("Brasil");
         markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.icone_marcador));
 
@@ -220,11 +220,11 @@ public class NavegacaoActivity extends FragmentActivity implements OnMapReadyCal
 
             }else if(preferenciaCoordenadas.equals(arrayCoordenadas.getItem(1).toString())){
                 //Grau minuto
-                labelCoordenadas.setText("Grau Minuto: "+this.toDegreeMinute(location.getLatitude(), location.getLongitude()));
+                labelCoordenadas.setText(" "+this.toDegreeMinute(location.getLatitude(), location.getLongitude(), location));
 
             }else if(preferenciaCoordenadas.equals(arrayCoordenadas.getItem(2).toString())){
                 //Grau minuto segundo
-                labelCoordenadas.setText("Grau-minuto-segundo: "+this.toDegreeMinuteSecond(location.getLatitude(), location.getLongitude()));
+                labelCoordenadas.setText(" "+this.toDegreeMinuteSecond(location.getLatitude(), location.getLongitude(), location));
             }
 
 
@@ -343,7 +343,7 @@ public class NavegacaoActivity extends FragmentActivity implements OnMapReadyCal
                     +String.valueOf("Rumo (graus) = ")+location.getBearing()+"\n"
                     +String.valueOf("Acuracia (graus) = ")+location.getAccuracy()+"\n"
                     +String.valueOf("Zoom  = ss ")+ mMap.getMaxZoomLevel()+"\n"
-                    +String.valueOf("-> ")+ this.toDegreeMinute(location.getLatitude(), location.getLongitude())+"\n";
+                    +String.valueOf("-> ")+ this.toDegreeMinute(location.getLatitude(), location.getLongitude(), location)+"\n";
 
             labelCoordenadas.setText(mensagem);
 
@@ -451,27 +451,26 @@ public class NavegacaoActivity extends FragmentActivity implements OnMapReadyCal
     }
 
 
-    public String toDegreeMinute(double lat, double lon){
-        lat = 75.9923564f;
-        lon = 75.9923564f;
+    public String toDegreeMinute(double lat, double lon, Location location){
+        String latSN = (int)lat >= 0 ? "N" : "S";
+        String lonEW = (int)lon >= 0 ? "E" : "W";
 
-        int grau = (int) lat;
-        int minuto = (int) ((lat%1) * 60);
+        String strLatitude = Location.convert(location.getLatitude(), Location.FORMAT_MINUTES).replace(":","° ").replace(",","\' ") + latSN;
+        String strLongitude = Location.convert(location.getLongitude(), Location.FORMAT_MINUTES).replace(":","° ").replace(",","\' ") + lonEW;
 
-        return "Coordenadas: "+grau+"º "+minuto+"' ";
-
-
+        return "LAT-LONG: " + strLatitude + ", " + ", " + strLongitude;
     }
 
-    public String toDegreeMinuteSecond(double lat, double lon){
-        lat = 75.9923564f;
-        lon = 75.9923564f;
+    public String toDegreeMinuteSecond(double lat, double lon, Location location){
 
-        int grau = (int) lat;
-        int minuto = (int) ((lat%1) * 60);
-        double segundo = (((lat%1) * 60)% 1) * 60;
+        String latSN = (int)lat >= 0 ? "N" : "S";
+        String lonEW = (int)lon >= 0 ? "E" : "W";
 
-        return " "+grau+"º "+minuto+"' "+segundo+"\"";
+        String strLatitudeSeconds = Location.convert(location.getLatitude(), Location.FORMAT_SECONDS).replaceFirst(":","° ").replace(":","\' ").replace(",",".") + "\" " + latSN;
+        String strLongitudeSeconds = Location.convert(location.getLongitude(), Location.FORMAT_SECONDS).replaceFirst(":","° ").replace(":","\' ").replace(",",".") + "\" " + lonEW;
+
+        return "LAT-LONG: " + strLatitudeSeconds + ", " + ", " + strLongitudeSeconds + "\n";
+
     }
 
     public String toKmh(float speed){
