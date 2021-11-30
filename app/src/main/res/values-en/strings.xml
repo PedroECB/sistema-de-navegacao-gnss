@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">MAPS</string>
-    <string name="buttonTelaConfig_txt">Configuration</string>
+    <string name="buttonTelaConfig_txt">Settings</string>
     <string name="buttonTelaNaveg_txt">"Navigation "</string>
     <string name="buttonTelaHist_txt">"History "</string>
     <string name="buttonTelaGnss_txt">"GNSS  "</string>
@@ -43,5 +43,12 @@
     <string name="buttonModoTabela">Table</string>
     <string name="buttonModoMapa">Map</string>
     <string name="title_activity_navegacao">NavigationActivity</string>
+    <string name="labelVisualizacaoLog">Location History</string>
+    <string name="labelTableHeaderHistorico">ID | COORDINATES -|- TIME</string>
+    <string name="labelBtnLimparHistorico">Clear History</string>
+    <string name="title_activity_historico_mapa">HistoryMap</string>
+    <string name="labelBtnLimparHistorico2">CLEAR HISTORY</string>
+    <string name="labelBtnEsferaCeleste">CELESTIAL SPHERE</string>
+    <string name="labelBtnInfoSatelites">SATELLITE INFORMATION</string>
 
 </resources>

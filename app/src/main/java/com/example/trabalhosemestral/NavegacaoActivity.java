@@ -1,5 +1,6 @@
 package com.example.trabalhosemestral;
 
+import androidx.annotation.RequiresApi;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.FragmentActivity;
 
@@ -8,7 +9,9 @@ import android.app.Activity;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
+import android.icu.text.SimpleDateFormat;
 import android.location.Location;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -36,6 +39,14 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.example.trabalhosemestral.databinding.ActivityNavegacaoBinding;
 import com.google.android.gms.tasks.OnSuccessListener;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
+import java.util.Locale;
+
 public class NavegacaoActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
@@ -60,6 +71,9 @@ public class NavegacaoActivity extends FragmentActivity implements OnMapReadyCal
     Circle circleMap;
     Marker marker;
     CameraPosition cameraPositionOne;
+
+    public static final String FILE_NAME = "historico.txt";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -416,7 +430,9 @@ public class NavegacaoActivity extends FragmentActivity implements OnMapReadyCal
             mLocationRequest.setInterval(5*1000);
             mLocationRequest.setFastestInterval(1*1000);
 
+
             mLocationCallback = new LocationCallback(){
+                @RequiresApi(api = Build.VERSION_CODES.N)
                 @Override
                 public void onLocationResult(LocationResult locationResult){
                     super.onLocationResult(locationResult);
@@ -424,7 +440,13 @@ public class NavegacaoActivity extends FragmentActivity implements OnMapReadyCal
                     //getUpdateLocation(location);
                     updateStatusBar(location);
                     updateMarkerAndCircle(location);
+
+                    //Implementar condicionamento de distâncias...
+                    //if(location.distancyTo) in meters
+
+                    registraLogLocalizacao(location);
                 }
+
             };
 
             mFusedLocationProviderClient.requestLocationUpdates(mLocationRequest, mLocationCallback, null);
@@ -448,6 +470,14 @@ public class NavegacaoActivity extends FragmentActivity implements OnMapReadyCal
             Toast.makeText(this, "Sem permissão para acessar a última localização...", Toast.LENGTH_SHORT).show();
             finish();
         }
+    }
+
+    public void stopUpdateLocation(){
+        if(mFusedLocationProviderClient != null){
+            mFusedLocationProviderClient.removeLocationUpdates(mLocationCallback);
+        }
+
+        Toast.makeText(this, "Parou de registrar o log de atualizações... ", Toast.LENGTH_SHORT).show();
     }
 
 
@@ -476,6 +506,57 @@ public class NavegacaoActivity extends FragmentActivity implements OnMapReadyCal
     public String toKmh(float speed){
         return "Velocidade (Km/h): "+(Math.floor(speed*3.6));
     }
+
+
+    @Override
+    public void onStop(){
+        super.onStop();
+        this.stopUpdateLocation();
+
+    }
+
+
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public void registraLogLocalizacao(Location location){
+        //Toast.makeText(this, "Registrando log de localização...!", Toast.LENGTH_LONG).show();
+        double latitude = location.getLatitude();
+        double longitude = location.getLongitude();
+
+
+        String formatData = "dd/MM/yyyy HH:mm:ss";
+
+        String date = new SimpleDateFormat(formatData, Locale.getDefault()).format(new Date());
+        //Toast.makeText(this, date+" BB", Toast.LENGTH_LONG).show();
+
+        String finalText = latitude+","+longitude+";"+date+"\n";
+
+        FileOutputStream fos = null;
+
+        try {
+            fos = openFileOutput(FILE_NAME, MODE_APPEND);
+            fos.write(finalText.getBytes(StandardCharsets.UTF_8));
+
+            //Toast.makeText(this, "Texto Salvo com sucesso! em "+getFilesDir()+"/"+FILE_NAME, Toast.LENGTH_LONG).show();
+        } catch (FileNotFoundException e) {
+            Toast.makeText(this, "Falha ao abrir arquivo",Toast.LENGTH_LONG).show();
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+
+        }finally {
+            //Fechando abertura de arquivo
+            if(fos != null){
+                try {
+                    fos.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
+    }
+
+
 
 
 } //Fim da Atividade

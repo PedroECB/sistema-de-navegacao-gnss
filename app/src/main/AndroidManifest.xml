@@ -16,7 +16,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TrabalhoSemestral">
         <activity
-            android:name=".MenuHistorico"
+            android:name=".EsferaCeleste"
+            android:exported="true" />
+        <activity
+            android:name=".MenuGnss"
             android:exported="true" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -30,6 +33,16 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
+        <activity
+            android:name=".HistoricoMapa"
+            android:exported="true"
+            android:label="@string/title_activity_historico_mapa" />
+        <activity
+            android:name=".HistoricoTabela"
+            android:exported="true" />
+        <activity
+            android:name=".MenuHistorico"
+            android:exported="true" />
         <activity
             android:name=".NavegacaoActivity"
             android:exported="true"
