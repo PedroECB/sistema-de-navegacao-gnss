@@ -34,8 +34,8 @@ public class MenuGnss extends AppCompatActivity implements View.OnClickListener{
                 break;
 
             case R.id.btnInfoSatelite:
-                Intent historicoMapa = new Intent(this, HistoricoMapa.class);
-                startActivity(historicoMapa);
+                Intent infoSatelite = new Intent(this, LocationManagerActivity.class);
+                startActivity(infoSatelite);
                 break;
 
         }
