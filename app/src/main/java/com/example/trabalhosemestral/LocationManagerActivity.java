@@ -123,6 +123,7 @@ public class LocationManagerActivity extends AppCompatActivity implements Locati
         public void onFirstFix(int ttffMillis) {
         }
 
+        @RequiresApi(api = Build.VERSION_CODES.O)
         @Override
         public void onSatelliteStatusChanged(@NonNull GnssStatus status) {
             TextView textViewGnss =(TextView)findViewById(R.id.textViewGnss);
@@ -135,6 +136,7 @@ public class LocationManagerActivity extends AppCompatActivity implements Locati
                             "Elev="+status.getElevationDegrees(i)+"\n"+
                             "Used in Fix:"+status.usedInFix(i)+"\n"+
                             "Constelation: "+status.getConstellationType(i)+"\n"+
+                            "CNR: "+status.getCarrierFrequencyHz(i)+"\n"+
                             "SNR="+status.getCn0DbHz(i)+"|X|\n\n\n";
                 }
             }
