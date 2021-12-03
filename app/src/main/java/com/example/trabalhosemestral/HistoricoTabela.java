@@ -28,64 +28,10 @@ public class HistoricoTabela extends AppCompatActivity {
 
         labelLog = (TextView) findViewById(R.id.labelLog);
 
-        //this.saveText();
-
-        //this.showLog();
         this.loadText();
 
     }
 
-
-
-    public void showLog(){
-
-        String text = "";
-
-        for(int i = 0; i < 50; i++){
-
-            text += (i+1)+" | -38.736946, -9.142685 | 25/11/2021 -|- 13:25:00 \n";
-
-        }
-
-        labelLog.setText(text);
-    }
-
-
-
-    public void saveText(){
-
-        String text = "";
-
-        for(int i = 0; i < 10; i++){
-
-            text += i+")Hello World \n";
-        }
-
-        FileOutputStream fos = null;
-
-        try {
-            fos = openFileOutput(FILE_NAME, MODE_APPEND);
-            fos.write(text.getBytes(StandardCharsets.UTF_8));
-
-            Toast.makeText(this, "Texto Salvo com sucesso! em "+getFilesDir()+"/"+FILE_NAME, Toast.LENGTH_LONG).show();
-        } catch (FileNotFoundException e) {
-            Toast.makeText(this, "Falha ao abrir arquivo",Toast.LENGTH_LONG).show();
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-
-        }finally {
-            //Fechando abertura de arquivo
-            if(fos != null){
-                try {
-                    fos.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-
-    }
 
 
     public void loadText(){
@@ -128,7 +74,10 @@ public class HistoricoTabela extends AppCompatActivity {
     }
 
 
-    public void clearText(){
+
+
+
+/*    public void clearText(){
         String text = "";
 
         FileOutputStream fos = null;
@@ -155,7 +104,7 @@ public class HistoricoTabela extends AppCompatActivity {
             }
         }
 
-    }
+    }*/
 
 
 

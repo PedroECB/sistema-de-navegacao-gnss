@@ -110,6 +110,9 @@ public class CircleView extends View {
 
             }
         }
+
+        //Desenhar itens da legenda
+        this.drawSubtitle(canvas);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -185,7 +188,7 @@ public class CircleView extends View {
                 canvas.drawText(satConstellation, x, y+50, paint);
                 break;
 
-            //GALILEO - UNIAO EUROPEIA
+            //IRNSS - INDIA
             case 7:
                 paint.setColor(Color.CYAN);
                 canvas.drawCircle(x, y, 30, paint);
@@ -207,6 +210,51 @@ public class CircleView extends View {
         }
 
 
+    }
+
+
+    public void drawSubtitle(Canvas canvas){
+        Paint paint = new Paint();
+        paint.setStyle(Paint.Style.FILL);
+        paint.setTextSize(30);
+        paint.setTextAlign(Paint.Align.LEFT);
+
+        paint.setColor(Color.YELLOW);
+        canvas.drawCircle(50f, this.getMeasuredHeight()-40, 20, paint);
+        paint.setColor(Color.BLACK);
+        canvas.drawText("GPS", 80f, this.getMeasuredHeight()-30, paint);
+
+        paint.setColor(Color.RED);
+        canvas.drawCircle(50f, this.getMeasuredHeight()-90, 20, paint);
+        paint.setColor(Color.BLACK);
+        canvas.drawText("SBAS", 80f, this.getMeasuredHeight()-70, paint);
+
+        paint.setColor(Color.MAGENTA);
+        canvas.drawCircle(50f, this.getMeasuredHeight()-135, 20, paint);
+        paint.setColor(Color.BLACK);
+        canvas.drawText("GLONASS", 80f, this.getMeasuredHeight()-110, paint);
+
+        paint.setStyle(Paint.Style.STROKE);
+        paint.setColor(Color.BLACK);
+        canvas.drawCircle(50f, this.getMeasuredHeight()-180, 20, paint);
+        paint.setStyle(Paint.Style.FILL);
+        paint.setColor(Color.BLACK);
+        canvas.drawText("QZSS", 80f, this.getMeasuredHeight()-160, paint);
+
+        paint.setColor(Color.RED);
+        canvas.drawCircle(50f, this.getMeasuredHeight()-220, 20, paint);
+        paint.setColor(Color.BLACK);
+        canvas.drawText("BEIDOU", 80f, this.getMeasuredHeight()-210, paint);
+
+        paint.setColor(Color.BLUE);
+        canvas.drawCircle(50f, this.getMeasuredHeight()-265, 20, paint);
+        paint.setColor(Color.BLACK);
+        canvas.drawText("GALILEO", 80f, this.getMeasuredHeight()-250, paint);
+
+        paint.setColor(Color.CYAN);
+        canvas.drawCircle(50f, this.getMeasuredHeight()-310, 20, paint);
+        paint.setColor(Color.BLACK);
+        canvas.drawText("IRNSS", 80f, this.getMeasuredHeight()-300, paint);
     }
 
 /*    @Override

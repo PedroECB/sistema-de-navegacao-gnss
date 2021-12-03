@@ -125,7 +125,7 @@ public class HistoricoMapa extends FragmentActivity implements OnMapReadyCallbac
     }
 
     public void setMarkersHistory(){
-        Toast.makeText(this, "Tamanho do historico atual2: "+this.historicoList.size(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Tamanho do historico atual: "+this.historicoList.size(), Toast.LENGTH_SHORT).show();
 
         if(!this.historicoList.isEmpty()){
             String initialPointString = this.historicoList.get(0);

@@ -129,7 +129,7 @@ public class LocationManagerActivity extends AppCompatActivity implements Locati
             TextView textViewGnss =(TextView)findViewById(R.id.textViewGnss);
             String mens="Dados do Sitema de Posicionamento\n\n";
             if (status!=null) {
-                mens+="Número de Satélites:"+status.getSatelliteCount()+"\n\n";
+                mens+="Número de Satélites visíveis:"+status.getSatelliteCount()+"\n\n";
                 for(int i=0;i<status.getSatelliteCount();i++) {
                     mens+="SVID="+status.getSvid(i)+"-"+"\n"+
                             "Azi="+status.getAzimuthDegrees(i)+"\n"+
